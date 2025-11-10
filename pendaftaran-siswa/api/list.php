@@ -1,12 +1,9 @@
 <?php
 require '../config.php';
 header('Content-Type: application/json; charset=utf-8');
-
-// ✅ Pastikan respons tidak di-cache (biar data selalu update)
 header('Cache-Control: no-cache, must-revalidate');
 header('Expires: 0');
 
-// ✅ Cek API key
 check_api_key();
 
 try {
@@ -27,3 +24,4 @@ try {
     ]);
 }
 ?>
+
