@@ -1,221 +1,202 @@
-/* style.css - Modern Futuristic Theme (cerah + neon accents) */
 :root{
-  --bg-1: linear-gradient(135deg, #f0f9ff 0%, #fef6ff 100%);
-  --card-bg: rgba(255,255,255,0.7);
-  --glass-border: rgba(99,102,241,0.12);
-  --accent: #6366f1; /* indigo */
-  --accent-glow: rgba(99,102,241,0.5); /* Glow color */
-  --accent-2: #06b6d4; /* cyan */
-  --muted: #6b7280;
-  --radius: 14px;
-  --shadow-sm: 0 6px 18px rgba(15,23,42,0.06);
-  --shadow-md: 0 10px 30px rgba(99,102,241,0.15); /* New shadow for lift */
+  --bg-1: linear-gradient(135deg, #f0f9ff 0%, #fef6ff 100%);
+  --card-bg: rgba(255,255,255,0.7);
+  --glass-border: rgba(99,102,241,0.12);
+  --accent: #6366f1; 
+  --accent-glow: rgba(99,102,241,0.5); 
+  --accent-2: #06b6d4;
+  --muted: #6b7280;
+  --radius: 14px;
+  --shadow-sm: 0 6px 18px rgba(15,23,42,0.06);
+  --shadow-md: 0 10px 30px rgba(99,102,241,0.15);
 }
 
-/* Base Styles (No changes needed here) */
-*, *::before, *::after {box-sizing:border-box} /* Added ::before/::after for safety */
+*, *::before, *::after {box-sizing:border-box} 
 html,body{height:100%}
 body{
-  margin:0;
-  /* Font diganti ke 'Space Grotesk' atau 'Poppins' jika tersedia untuk kesan lebih futuristik */
-  font-family: 'Poppins', Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-  background: var(--bg-1);
-  color:#0f172a;
-  -webkit-font-smoothing:antialiased;
-  -moz-osx-font-smoothing:grayscale;
-  padding:32px;
+  margin:0;
+  font-family: 'Poppins', Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: var(--bg-1);
+  color:#0f172a;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  padding:32px;
 }
 .container{max-width:1100px;margin:0 auto;}
 
-/* --- Card (Glass Effect Enhancement) --- */
 .card{
-  background: linear-gradient(180deg, rgba(255,255,255,0.95), rgba(255,255,255,0.8)); /* Lebih opaque */
-  backdrop-filter: blur(5px); /* Tambahkan efek Glassmorphism */
-  border:1px solid var(--glass-border);
-  border-radius:var(--radius);
-  box-shadow:var(--shadow-sm);
-  padding:20px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Tambah transisi */
+  background: linear-gradient(180deg, rgba(255,255,255,0.95), rgba(255,255,255,0.8));
+  backdrop-filter: blur(5px);
+  border:1px solid var(--glass-border);
+  border-radius:var(--radius);
+  box-shadow:var(--shadow-sm);
+  padding:20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
 }
 .card:hover {
-    /* Sedikit terangkat saat hover */
-    transform: translateY(-2px); 
-    box-shadow: var(--shadow-md); 
+    transform: translateY(-2px); 
+    box-shadow: var(--shadow-md); 
 }
 
-/* --- Header & Brand (Slight Glow) --- */
 .header{
-  display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:24px; /* Margin lebih besar */
+  display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:24px; 
 }
 .brand{display:flex;align-items:center;gap:12px;}
 .logo{
-  width:56px; height:56px;
-  border-radius:12px;
-  background:linear-gradient(135deg,var(--accent),var(--accent-2));
-  box-shadow: 0 0 20px var(--accent-glow); /* Neon Glow */
-  display:flex;align-items:center;justify-content:center;
-  color:white;font-weight:700;
-  font-size:18px;
+  width:56px; height:56px;
+  border-radius:12px;
+  background:linear-gradient(135deg,var(--accent),var(--accent-2));
+  box-shadow: 0 0 20px var(--accent-glow);
+  display:flex;align-items:center;justify-content:center;
+  color:white;font-weight:700;
+  font-size:18px;
 }
 .title{
-    font-size:24px;font-weight:800; /* Lebih besar & tebal */
-    color:var(--accent);
-    text-shadow: 0 0 10px rgba(99,102,241,0.18); /* Subtle glow */
+    font-size:24px;font-weight:800; 
+    color:var(--accent);
+    text-shadow: 0 0 10px rgba(99,102,241,0.18); 
 }
 .subtitle{font-size:14px;color:var(--muted); font-weight:500;}
 
-/* --- Buttons (Crucial for Futuristic Look) --- */
 .btn{
-  display:inline-block;padding:10px 18px;border-radius:12px; /* Padding lebih besar, radius lebih lembut */
-  text-decoration:none;font-weight:700;border:0;cursor:pointer;
-  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); /* Transisi profesional */
-}
-/* Primary Button - Neon Glow Pop */
-.btn-primary{
-    background:linear-gradient(90deg,var(--accent),#8b5cf6);
-    color:white;
-    box-shadow:0 6px 20px rgba(99,102,241,0.3); /* Initial shadow/glow */
-}
-.btn-primary:hover{
-    /* Pop effect */
-    transform: translateY(-2px); 
-    /* Neon Glow yang lebih kuat saat hover */
-    box-shadow: 0 0 30px var(--accent-glow), 0 8px 30px rgba(99,102,241,0.4); 
-    filter: brightness(1.1);
-}
-/* Ghost Button - Border Glow */
-.btn-ghost{
-    background:transparent;
-    border:2px solid rgba(15,23,42,0.1); /* Border lebih tebal */
-    color:#0f172a;
-}
-.btn-ghost:hover{
-    border-color: var(--accent); /* Border berubah warna jadi accent */
-    color: var(--accent); 
-    background: rgba(99,102,241,0.05); /* Sedikit latar belakang accent */
+  display:inline-block;padding:10px 18px;border-radius:12px; 
+  text-decoration:none;font-weight:700;border:0;cursor:pointer;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); 
 }
 
-/* --- Form & Input (Clean and Focused) --- */
-.form-group{margin-bottom:16px;} /* Spacing lebih besar */
+.btn-primary{
+    background:linear-gradient(90deg,var(--accent),#8b5cf6);
+    color:white;
+    box-shadow:0 6px 20px rgba(99,102,241,0.3);
+}
+.btn-primary:hover{
+    transform: translateY(-2px); 
+    box-shadow: 0 0 30px var(--accent-glow), 0 8px 30px rgba(99,102,241,0.4); 
+    filter: brightness(1.1);
+}
+.btn-ghost{
+    background:transparent;
+    border:2px solid rgba(15,23,42,0.1);
+    color:#0f172a;
+}
+.btn-ghost:hover{
+    border-color: var(--accent);
+    color: var(--accent); 
+    background: rgba(99,102,241,0.05);
+}
+
+.form-group{margin-bottom:16px;}
 label{display:block;margin-bottom:6px;font-size:14px;font-weight:600;color:#111827}
 input[type="text"], textarea, select {
-  width:100%;padding:12px 14px;border-radius:10px;
-  border:1px solid rgba(15,23,42,0.1); /* Border sedikit lebih tebal */
-  background:white; font-size:15px; outline:none;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  width:100%;padding:12px 14px;border-radius:10px;
+  border:1px solid rgba(15,23,42,0.1);
+  background:white; font-size:15px; outline:none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 input[type="text"]:focus, textarea:focus, select:focus {
-    border-color: var(--accent); /* Border fokus accent */
-    box-shadow: 0 0 0 3px rgba(99,102,241,0.2); /* Ring fokus futuristik */
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(99,102,241,0.2);
 }
 textarea{min-height:100px;resize:vertical}
 input[type="file"]{font-size:13px}
 
-/* --- Table List (Streamlined Look) --- */
 .table{
-  width:100%;border-collapse:separate; /* Penting untuk radius di baris */
-  border-spacing: 0 8px; /* Spasi antar baris */
-  margin-top:12px;font-size:14px;
+  width:100%;border-collapse:separate;
+  border-spacing: 0 8px;
+  margin-top:12px;font-size:14px;
 }
 .table thead th{
-    padding:12px 10px;
-    background:linear-gradient(90deg, rgba(99,102,241,0.08), rgba(6,182,212,0.06));
-    font-weight:700;
-    color: #1f2937;
-    text-transform: uppercase;
-    font-size: 13px;
-    letter-spacing: 0.5px;
+    padding:12px 10px;
+    background:linear-gradient(90deg, rgba(99,102,241,0.08), rgba(6,182,212,0.06));
+    font-weight:700;
+    color: #1f2937;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 0.5px;
 }
 .table tbody tr {
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 1px 4px rgba(15,23,42,0.04);
-    transition: box-shadow 0.2s ease, transform 0.2s ease;
-    cursor: pointer;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(15,23,42,0.04);
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+    cursor: pointer;
 }
 .table tbody tr:hover {
-    box-shadow: 0 4px 10px rgba(99,102,241,0.1); /* Hover shadow */
-    transform: translateY(-1px);
+    box-shadow: 0 4px 10px rgba(99,102,241,0.1);
+    transform: translateY(-1px);
 }
 .table tbody td{
-    padding:14px 10px; /* Padding lebih besar */
-    border-bottom:none; /* Hilangkan border antar baris karena sudah ada spasi */
-    vertical-align:middle;
+    padding:14px 10px;
+    border-bottom:none;
+    vertical-align:middle;
 }
 .table tbody tr td:first-child { border-top-left-radius: 8px; border-bottom-left-radius: 8px; }
 .table tbody tr td:last-child { border-top-right-radius: 8px; border-bottom-right-radius: 8px; }
 
-.thumb{width:64px;height:64px;object-fit:cover;border-radius:50%; /* Foto bulat lebih modern */ border:2px solid var(--accent-2);}
+.thumb{width:64px;height:64px;object-fit:cover;border-radius:50%; border:2px solid var(--accent-2);}
 
-/* --- Utility & Responsive (No changes needed here) --- */
 .muted{color:var(--muted);font-size:13px}
 .actions a{margin-right:8px;font-weight:600;text-decoration:none}
 .actions a.delete{color:#ef4444}
 .actions a.edit{color:#0ea5b7}
 
 @media (max-width:900px){
-  .grid{grid-template-columns:1fr; }
-  .header{flex-direction:column;align-items:flex-start;gap:8px}
+  .grid{grid-template-columns:1fr; }
+  .header{flex-direction:column;align-items:flex-start;gap:8px}
 }
 
-/* Subtle Neon Title (Enhanced) */
 .neon {
-  color:var(--accent);
-  font-weight: 800;
-  text-shadow: 0 0 18px rgba(99,102,241,0.25); /* Glow lebih kuat */
+  color:var(--accent);
+  font-weight: 800;
+  text-shadow: 0 0 18px rgba(99,102,241,0.25);
 }
 
-/* --- Tambahan: Modal/Pop-up Futuristik --- */
-
-/* Latar belakang gelap (backdrop) */
 .modal-backdrop {
-    position: fixed;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background: rgba(15, 23, 42, 0.7); /* Dark semi-transparent */
-    backdrop-filter: blur(8px); /* Blur/Glass effect pada background */
-    z-index: 1000;
-    display: none; /* Default hidden */
-    opacity: 0;
-    transition: opacity 0.3s ease;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(15, 23, 42, 0.7);
+    backdrop-filter: blur(8px);
+    z-index: 1000;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 .modal-backdrop.active {
-    display: block;
-    opacity: 1;
+    display: block;
+    opacity: 1;
 }
 
-/* Kontainer Pop-up */
 .modal-content {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(0.9); /* Animasi scale-up */
-    background: linear-gradient(180deg, rgba(255,255,255,1), rgba(255,255,255,0.95)); /* Latar putih cerah */
-    border-radius: var(--radius);
-    box-shadow: 0 10px 40px rgba(99,102,241,0.4); /* Neon shadow yang kuat */
-    padding: 30px;
-    width: 90%;
-    max-width: 500px;
-    z-index: 1001;
-    opacity: 0;
-    transition: all 0.3s cubic-bezier(0.17, 0.84, 0.44, 1);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.9);
+    background: linear-gradient(180deg, rgba(255,255,255,1), rgba(255,255,255,0.95));
+    border-radius: var(--radius);
+    box-shadow: 0 10px 40px rgba(99,102,241,0.4);
+    padding: 30px;
+    width: 90%;
+    max-width: 500px;
+    z-index: 1001;
+    opacity: 0;
+  S: all 0.3s cubic-bezier(0.17, 0.84, 0.44, 1);
 }
 .modal-backdrop.active .modal-content {
-    opacity: 1;
-    transform: translate(-50%, -50%) scale(1); /* Scale-up dari 0.9 ke 1 */
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
 }
 
-/* Close button style */
 .modal-close {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    background: none;
-    border: none;
-    font-size: 24px;
-    color: var(--muted);
-    cursor: pointer;
-    transition: color 0.2s ease;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: var(--muted);
+nbsp;   cursor: pointer;
+    transition: color 0.2s ease;
 }
 .modal-close:hover {
-    color: var(--accent); /* Warna accent saat hover */
+    color: var(--accent);
 }
