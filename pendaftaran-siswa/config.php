@@ -1,15 +1,10 @@
 <?php
-// ============================
-// CONFIG.PHP
-// ============================
 
-// Konfigurasi koneksi database
 $db_host = '127.0.0.1';
 $db_name = 'pendaftaran_siswa';
 $db_user = 'root';
-$db_pass = 'seblak26'; // ✅ password MySQL kamu
+$db_pass = 'seblak26'; 
 
-// Opsi koneksi PDO
 $options = [
     PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,       // tampilkan error detail
     PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,  // hasil query berupa array asosiatif
@@ -33,11 +28,6 @@ try {
     ]));
 }
 
-// ============================
-// UPLOAD SETTINGS
-// ============================
-
-// Folder tempat menyimpan file upload (harus bisa ditulis)
 define('UPLOAD_DIR', __DIR__ . '/uploads/'); // folder fisik di server
 define('UPLOAD_DIR_WEB', 'uploads/');         // path untuk <img src="">
 define('MAX_FILE_SIZE', 2 * 1024 * 1024);     // batas maksimal 2MB
@@ -54,9 +44,6 @@ if (!is_dir(UPLOAD_DIR)) {
     mkdir(UPLOAD_DIR, 0755, true);
 }
 
-// ============================
-// API SECURITY (opsional, untuk endpoint API)
-// ============================
 $API_KEY = 'seblak26';
 
 // Validasi API key (jika dibutuhkan di file API)
@@ -85,3 +72,4 @@ function unauthorized()
     exit;
 }
 ?>
+
