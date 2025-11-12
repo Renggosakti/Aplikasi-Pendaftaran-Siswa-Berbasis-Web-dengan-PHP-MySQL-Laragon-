@@ -94,8 +94,7 @@ Bagian ini disediakan untuk menampilkan tangkapan layar hasil pengujian dan impl
 * **Form Edit (form-edit.php):** *Formulir yang sudah terisi data siswa yang akan diubah.*
 
 ## 📎 Link Demo & Source Code
-* **Link Demo:** *(masukkan link demo online di sini)*
-* **Source Code:** *(Repo ini)*
+* **Link Demo:** *https://pendaftaran-siswa.infinityfreeapp.com/?i=1*
 
 ## 🏁 Kesimpulan
 Aplikasi ini berhasil menerapkan konsep dasar dan fundamental dari sistem **CRUD** menggunakan PHP natif dan database MySQL.
